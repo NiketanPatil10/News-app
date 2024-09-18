@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".RegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/re"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:textSize="40dp"
+                android:textStyle="bold"
+                android:layout_marginTop="50dp"
+                android:text="Update Detail"/>
+
+
+            <EditText
+                android:id="@+id/editTextUpdateName"
+                android:layout_width="301dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/custome_edittext"
+                android:drawableStart="@drawable/baseline_account_circle"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Full Name"
+                android:inputType="textPersonName"
+                android:paddingLeft="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+            <EditText
+                android:id="@+id/editTextUpdateEmail"
+                android:layout_width="301dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:background="@drawable/custome_edittext"
+                android:drawableStart="@drawable/baseline_email_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Email"
+                android:layout_marginTop="30dp"
+                android:inputType="textWebEmailAddress"
+                android:paddingLeft="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+
+            <EditText
+                android:id="@+id/editTextUpdateDoB"
+                android:layout_width="301dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:background="@drawable/custome_edittext"
+                android:drawableStart="@drawable/baseline_calendar_month_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Select your date of birth"
+                android:focusable="false"
+                android:layout_marginTop="30dp"
+                android:inputType="date"
+                android:paddingLeft="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+            <EditText
+                android:id="@+id/editTextUpdateMobile"
+                android:layout_width="301dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:background="@drawable/custome_edittext"
+                android:drawableStart="@drawable/baseline_call_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Mobile"
+                android:layout_marginTop="30dp"
+                android:inputType="phone"
+                android:paddingLeft="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/re"
+            android:orientation="horizontal">
+
+
+            <RadioGroup
+                android:id="@+id/radioGroupUpdateGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="40dp"
+                    android:text="Gender"/>
+
+                <RadioButton
+                    android:id="@+id/radio_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Male"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+            </RadioGroup>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/ge">
+
+
+            <Button
+                android:id="@+id/updateProfilePicturebtn"
+                android:layout_width="280dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="17dp"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_below="@+id/editTextText4"
+                android:backgroundTint="#5EA5F1"
+                android:text="Upload Profile Picture"/>
+
+
+            <Button
+                android:id="@+id/updateProfilebtn"
+                android:layout_width="280dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="17dp"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_below="@+id/editTextText4"
+                android:backgroundTint="#5EA5F1"
+                android:text="Update Profile"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_below="@+id/loginbtn"
+                />
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

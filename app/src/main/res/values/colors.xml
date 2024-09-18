@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary">#FFECD072</color>
+
+
+
+    <color name="opensettings">#D5BD06</color>
+
+    <color name="opensetting">#D5BD06</color>
+    <color name="primary3">#00B3FF</color>
+
+
+    <color name="cancelbackcolor">#00A64B</color>
+    <color name="dialogcirclecolor">#009EFF</color>
+
+    <color name="red">#E10008</color>
+    <color name="blue">#0061E9</color>
+
+</resources>

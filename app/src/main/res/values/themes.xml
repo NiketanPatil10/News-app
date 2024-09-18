@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FinalNews" parent="Theme.MaterialComponents.DayNight">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">#FFFFFF</item>
+
+
+        // Disable darkmode
+
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+
+
+    </style>
+
+    <style name="Theme.FinalNews" parent="Base.Theme.FinalNews" />
+</resources>

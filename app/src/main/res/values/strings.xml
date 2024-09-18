@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Insta News</string>
+
+    <string name="Already_have_an_account_sign_up">Already have an account  <u>Sign up</u></string>
+    <string name="forgot_password"><u>forgote password</u></string>
+    <string name="Don_t_have_account_Signup_text">Do not have account  <u>Sign up</u></string>
+
+    <string name="No_Internet">No Internet Connection</string>
+
+    <string name="Home">Home</string>
+    <string name="Science">Science</string>
+    <string name="Sports">Sports</string>
+    <string name="Business">Business</string>
+    <string name="Entertainment">Entertainment</string>
+    <string name="Home_fragment" />
+    <string name="science_fragment" />
+    <string name="sports_fragment" />
+
+    <string name="Cancel">Cancel</string>
+    <string name="Open_Settings">Open Settings</string>
+
+    <string name="message">Please check your internet settings.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

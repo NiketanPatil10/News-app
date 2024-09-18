@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        drawable="@drawable/baseline_home_24"
+        text="@string/Home" />
+
+    <tab
+        drawable="@drawable/baseline_biotech_24"
+        text="@string/Science" />
+
+    <tab
+        drawable="@drawable/baseline_directions_run_24"
+        text="@string/Sports" />
+
+    <tab
+        drawable="@drawable/baseline_business_center_24"
+        text="@string/Business"/>
+
+    <tab
+        drawable="@drawable/baseline_music_note_24"
+        text="@string/Entertainment" />
+</tabs>

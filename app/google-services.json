@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "505825360368",
+    "project_id": "finalnews-1f60b",
+    "storage_bucket": "finalnews-1f60b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:505825360368:android:48f9f947b3f7ddef89c535",
+        "android_client_info": {
+          "package_name": "com.example.finalnews"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdKI0eOC_k8pQqgURuig71D9buYFsSc54"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
