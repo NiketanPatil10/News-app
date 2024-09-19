@@ -183,7 +183,7 @@ public class DeleteProfileActivity extends AppCompatActivity {
                     deleteUserData();
                     authProfile.signOut();
                     Toast.makeText(DeleteProfileActivity.this, "User has been deleted", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(DeleteProfileActivity.this,UserProfileActivity.class);
+                    Intent intent = new Intent(DeleteProfileActivity.this,LoginActivity.class);
                     startActivity(intent);
                     finish();
                 }else {
@@ -219,7 +219,7 @@ public class DeleteProfileActivity extends AppCompatActivity {
         databaseReference.child(firebaseUser.getUid()).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
-                Toast.makeText(DeleteProfileActivity.this, "Your data successfully deleted", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DeleteProfileActivity.this, "Your data successfully deleted", Toast.LENGTH_LONG).show();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

@@ -44,6 +44,8 @@ public class HomeActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_home);
 
+
+
         if (!isConnected()) {
             showNoInternetDialog();
         }else{
@@ -101,14 +103,6 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
 
-    void changeInProgress(boolean show){
-        if (show){
-            progressIndicator.setVisibility(View.VISIBLE);
-        }else {
-            progressIndicator.setVisibility(View.INVISIBLE);
-        }
-    }
-
     // User coming to UserProfileActivity after successful registration
     private void checkIfEmailVerified(FirebaseUser firebaseUser) {
         if (!firebaseUser.isEmailVerified()){
@@ -116,7 +110,8 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
     private void showAlertDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(HomeActivity.this);
+
+      /*  AlertDialog.Builder builder = new AlertDialog.Builder(HomeActivity.this);
         builder.setTitle("Email Not Verified");
         builder.setMessage("Please verify your email now. You can not login without email verification next time");
 
@@ -133,7 +128,42 @@ public class HomeActivity extends AppCompatActivity {
         // Create the AlertDialog
         AlertDialog alertDialog = builder.create();
         //   Show the alert dialog
-        alertDialog.show();
+        alertDialog.show();  */
+
+
+        new AwesomeInfoDialog(this)
+                .setTitle("Email Not Verified")
+                .setMessage("Please verify your email now. You can not login without email verification next time")
+                .setColoredCircle(R.color.dialogcirclecolor)
+                //.setDialogIconAndColor(R.color.white)
+                .setCancelable(true)
+                .setPositiveButtonText("Continue")
+                .setPositiveButtonbackgroundColor(R.color.primary)
+                .setPositiveButtonTextColor(R.color.black)
+
+                .setNegativeButtonText("Cancel")
+                .setNegativeButtonbackgroundColor(R.color.primary3)
+                .setNegativeButtonTextColor(R.color.black)
+
+                .setPositiveButtonClick(new Closure() {
+                    @Override
+                    public void exec() {
+                        Intent intent = new Intent(Intent.ACTION_MAIN);
+                        intent.addCategory(Intent.CATEGORY_APP_EMAIL);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);   //to email app in new window and not within  our app
+                        startActivity(intent);
+                    }
+                })
+                .setNegativeButtonClick(new Closure() {
+                    @Override
+                    public void exec() {
+                        int id;
+                        //click
+                        dismissDialog(1);
+                    }
+                })
+                .show();
+
     }
 
     @Override
@@ -189,7 +219,7 @@ public class HomeActivity extends AppCompatActivity {
     // when internet is not connected to the application then show no internet connection dialog
     private void showNoInternetDialog() {
 
-       /* AlertDialog.Builder builder = new AlertDialog.Builder(this);
+      /*  AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("No Internet Connection");
         builder.setMessage("Please check your internet settings.");
         builder.setPositiveButton("Open Settings", new DialogInterface.OnClickListener() {
@@ -238,9 +268,14 @@ public class HomeActivity extends AppCompatActivity {
                 })
                 .show();
 
+    }
 
 
-
-
+    void changeInProgress(boolean show){
+        if (show){
+            progressIndicator.setVisibility(View.VISIBLE);
+        }else {
+            progressIndicator.setVisibility(View.INVISIBLE);
+        }
     }
 }

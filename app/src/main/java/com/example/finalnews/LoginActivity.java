@@ -201,6 +201,13 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
         // Create the AlertDialog
         AlertDialog alertDialog = builder.create();
         //   Show the alert dialog
